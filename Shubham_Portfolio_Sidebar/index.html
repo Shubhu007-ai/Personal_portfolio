@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shubham's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+        <h2 class="sidebar-title" id="sidebarTitle">Shubham Patel</h2>
+        <ul>
+            <li><a href="#home">🏠 <span class="label">Home</span></a></li>
+            <li><a href="#about">🙋 <span class="label">About</span></a></li>
+            <li><a href="#services">🛠 <span class="label">Services</span></a></li>
+            <li><a href="#projects">📂 <span class="label">Projects</span></a></li>
+            <li><a href="#stats">📊 <span class="label">Stats</span></a></li>
+            <li><a href="#contact">📞 <span class="label">Contact</span></a></li>
+        </ul>
+    </div>
+    <div class="main-content" id="mainContent">
+        <section id="home">
+            <h1>Hello, I'm Shubham Patel</h1>
+            <p>Frontend Developer | HTML, CSS, JavaScript</p>
+            <div class="hero-row">
+                <img src="images/portfolioman.jpg" alt="Profile" class="profile-img">
+                <div class="hero-buttons">
+                    <a href="#contact" class="glow-button">Contact Me</a>
+                    <a href="resume.pdf" class="glow-button" download>Download CV</a>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <marquee behavior="" direction="left">Aspiring developer with a passion for building user-friendly web apps.
+            </marquee>
+            <!-- <p>Aspiring developer with a passion for building user-friendly web apps.</p> -->
+        </section>
+        <section id="skill">
+            <h2 class="skills">Skills</h2>
+            <div class="card">HTML,CSS,JavaScript</div>
+            <div class="card">Basic Python(Programming)</div>
+            <div class="card">Basic C(Programming)</div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Netflix Clone</li>
+                <li>Friday Web Assistant</li>
+                <li>Responsive Portfolio</li>
+            </ul>
+        </section>
+        <section id="stats">
+            <h2>Stats</h2>
+            <div class="counter" data-target="3"></div>
+            <p>Completed Projects</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm"> <input type="text" placeholder="Your Name" required /> <input type="email"
+                    placeholder="Your Email" required /> <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="glow-button">Send</button>
+            </form>
+            <p id="thankYouMsg"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
