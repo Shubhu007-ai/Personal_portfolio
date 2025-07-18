@@ -38,7 +38,7 @@ display: flex;
     padding: 5px 15px;
     cursor: pointer;
     font-size: 25px;
-    transition: left 0.3s, width 0.3s, padding 0.3s;
+    transition: left 0.3s, width 0.3s, padding 0.3s, opacity 0.3s;
     z-index: 20;
 }
 .sidebar.collapsed {
@@ -154,6 +154,11 @@ background-size: cover;
 background-position: center;
 background-blend-mode: overlay;
 }
+
+.project-li {
+    margin-bottom: 18px;
+}   
+
 #home {
 background: url('images/bghome.jpg') center/cover no-repeat;
 background-color: rgba(0,0,0,0.5);
@@ -375,5 +380,70 @@ box-shadow: 0 0 10px #00ffff;
     .card {
         padding: 6px;
         font-size: 0.85em;
+    }
+}
+
+
+/* Add to style.css */
+/* ...existing code... */
+
+/* ...existing code... */
+
+.site-footer {
+    width: 100%;
+    background: rgba(0,0,0,1);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    border-top: 2px solid #00ffff44;
+    box-shadow: 0 -2px 16px #00ffff22;
+    font-size: 1.1em;
+    position: fixed;   /* Ensures footer is below sections, not fixed or relative */
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.site-footer a {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.2s;
+}
+
+.site-footer a:hover {
+    color: #2ab2f1;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 900px) {
+    .site-footer {
+        font-size: 1em;
+        padding: 18px 2vw 10px 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        font-size: 0.8em;
+        padding: 14px 2vw 8px 2vw;
+    }
+}
+
+/* If you want the footer fixed only on very small screens, you can add: */
+@media (max-width: 480px) {
+    .site-footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        z-index: 2;
+        margin-top: 0;
+        padding: 12px 2vw 8px 2vw;
+        font-size: 0.6em;
+    }
+    body {
+        padding-bottom: 60px; /* Prevent content hidden behind footer */
     }
 }
