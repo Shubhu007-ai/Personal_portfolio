@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shubham's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
     <div class="sidebar" id="sidebar">
         <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
         <h2 class="sidebar-title" id="sidebarTitle">Shubham Patel</h2>
@@ -22,7 +27,7 @@
         </ul>
     </div>
     <div class="main-content" id="mainContent">
-        <section id="home">
+        <section id="home" data-aos="fade-up">
             <h1>Hello, I'm Shubham Patel</h1>
             <p>Frontend Developer | HTML, CSS, JavaScript</p>
             <div class="hero-row">
@@ -33,11 +38,16 @@
                 </div>
             </div>
         </section>
-        <section id="about">
+        <section id="about" data-aos="fade-up">
             <h2>About Me</h2>
-            <marquee behavior="" direction="left">Aspiring developer with a passion for building user-friendly web apps.
+            <marquee  direction="left">Aspiring web developer with a strong foundation in frontend
+                technologies and a passion for building responsive, user-friendly web applications. Committed to
+                continuous learning and excited to contribute to real-world projects in a dynamic team environment.
             </marquee>
             <!-- <p>Aspiring developer with a passion for building user-friendly web apps.</p> -->
+            <div>
+                <h4>Student of B.Tech(CSE) persuing at Rawal institute of
+                    Engineering and Technology, Faridabad </h4>
         </section>
         <section id="skill">
             <h2 class="skills">Skills</h2>
@@ -45,20 +55,25 @@
             <div class="card">Basic Python(Programming)</div>
             <div class="card">Basic C(Programming)</div>
         </section>
-        <section id="projects">
+        <section id="projects" data-aos="fade-up">
             <h2>Projects</h2>
             <ul>
-                <li>Netflix Clone</li>
-                <li>Friday Web Assistant</li>
+                <li class="project-li">Netflix Clone: <br>
+                    ->Created a responsive clone of the Netflix homepage.Focused on layout, responsiveness, and UI
+                    design using HTML, CSS, and JavaScript</li>
+                <li class="project-li">Friday (Personal Assistant Web App): <br>
+                    ->Developed a voice-based assistant using JavaScript.Integrated browser-based speech recognition and
+                    DOM interaction
+                </li>
                 <li>Responsive Portfolio</li>
             </ul>
         </section>
-        <section id="stats">
+        <section id="stats" data-aos="fade-up">
             <h2>Stats</h2>
             <div class="counter" data-target="3"></div>
             <p>Completed Projects</p>
         </section>
-        <section id="contact">
+        <section id="contact" data-aos="fade-up">
             <h2>Contact</h2>
             <form id="contactForm"> <input type="text" placeholder="Your Name" required /> <input type="email"
                     placeholder="Your Email" required /> <textarea placeholder="Your Message" required></textarea>
@@ -67,7 +82,20 @@
             <p id="thankYouMsg"></p>
         </section>
     </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Shubham Patel. All rights reserved.</p>
+            <p>
+                <a href="mailto:shubham@example.com">shubham@example.com</a>
+                <a href="https://github.com/Shubhu007-ai" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/shubham-patel-29b048296" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1200 });</script>
+
 </body>
 
 </html>
